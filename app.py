@@ -46,6 +46,18 @@ st.markdown("""
         -webkit-text-fill-color: transparent;
         margin-bottom: 0.5rem;
     }
+
+    /* Fix heading and label visibility */
+    h1, h2, h3, h4, h5, h6 {
+        color: #FFFFFF !important;
+        font-weight: 700 !important;
+    }
+
+    label, .stSelectbox label, .stNumberInput label {
+        color: #E6EDF3 !important;
+        font-weight: 600 !important;
+        font-size: 0.9rem !important;
+    }
     
     .metric-card {
         background-color: #0D1117;
@@ -55,6 +67,7 @@ st.markdown("""
         box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         text-align: center;
         transition: transform 0.3s ease;
+        color: #FFFFFF;
     }
     
     .metric-card:hover {
