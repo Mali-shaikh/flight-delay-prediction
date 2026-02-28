@@ -1,6 +1,6 @@
 # ✈️ Flight Delay Prediction — End-to-End ML System
 
-[![CI/CD Pipeline](https://github.com/YOUR_USERNAME/flight-delay-prediction/actions/workflows/ci.yml/badge.svg)](https://github.com/YOUR_USERNAME/flight-delay-prediction/actions)
+[![CI/CD Pipeline](https://github.com/Mali-Shaikh/flight-delay-prediction/actions/workflows/ci.yml/badge.svg)](https://github.com/Mali-Shaikh/flight-delay-prediction/actions)
 [![Python 3.11](https://img.shields.io/badge/python-3.11-blue.svg)](https://python.org)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.109-green.svg)](https://fastapi.tiangolo.com)
 [![MLflow](https://img.shields.io/badge/MLflow-2.10-orange.svg)](https://mlflow.org)
@@ -8,7 +8,7 @@
 
 > **A production-grade ML system** for predicting flight delays — covering ETL, ML modeling, MLOps, FastAPI, Docker, CI/CD, and cloud deployment.
 
-🔗 **Live Demo:** [Hugging Face Space](https://huggingface.co/spaces/YOUR_USERNAME/flight-delay-predictor)
+🔗 **Live Demo:** [Streamlit App](https://share.streamlit.io/)
 
 ---
 
@@ -22,7 +22,7 @@ Build a **Flight Delay Prediction Platform** that:
 4. 🤖 Trains ML models (XGBoost, LightGBM, Random Forest)
 5. 📊 Tracks experiments with MLflow
 6. 📦 Packages & deploys the best model
-7. ☁️ Exposes a cloud inference endpoint (Hugging Face Spaces)
+7. ☁️ Exposes a cloud inference interactive UI (Streamlit)
 8. 🔍 Implements monitoring & basic MLOps lifecycle
 
 ---
@@ -47,7 +47,7 @@ flight-delay-prediction/
 ├── api/
 │   ├── main.py                  # FastAPI app
 │   └── schemas.py               # Pydantic models
-├── app.py                       # Hugging Face Gradio UI
+├── app.py                       # Streamlit UI
 ├── monitoring/drift_detection.py
 ├── tests/
 │   ├── test_etl.py
@@ -64,7 +64,7 @@ flight-delay-prediction/
 ### 1. Clone & Install
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/flight-delay-prediction.git
+git clone https://github.com/Mali-Shaikh/flight-delay-prediction.git
 cd flight-delay-prediction
 python -m venv venv
 venv\Scripts\activate        # Windows
@@ -177,27 +177,21 @@ python src/train.py
 
 ---
 
-## 🤗 Hugging Face Spaces Deployment
+## ☁️ Streamlit Community Cloud Deployment
 
 ```bash
-# 1. Create a new Space at https://huggingface.co/new-space
-#    SDK: Gradio, Space name: flight-delay-predictor
-
-# 2. Clone the Space
-git clone https://huggingface.co/spaces/YOUR_USERNAME/flight-delay-predictor
-cd flight-delay-predictor
-
-# 3. Copy project files
-cp app.py requirements.txt README.md ./
-cp -r src/ models/ ./
-
-# 4. Push to deploy
+# 1. Ensure all your files, including the models/ folder, are pushed to GitHub.
 git add .
-git commit -m "Deploy flight delay predictor"
-git push
+git commit -m "Deploy Streamlit flight delay predictor"
+git push origin main
 
-# Live in ~2 minutes at:
-# https://huggingface.co/spaces/YOUR_USERNAME/flight-delay-predictor
+# 2. Go to https://share.streamlit.io/
+# 3. Click "New app" -> "Deploy a public app from GitHub"
+# 4. Select your repository: Mali-Shaikh/flight-delay-prediction
+# 5. Set the Main file path to: app.py
+# 6. Click "Deploy!"
+
+# Live in ~2 minutes! Streamlit will automatically install requirements.txt and run your app.
 ```
 
 ---
@@ -254,10 +248,10 @@ git push -u origin main
 | **ML** | Scikit-learn, XGBoost, LightGBM |
 | **MLOps** | MLflow, Evidently AI |
 | **API** | FastAPI, Uvicorn, Pydantic |
-| **UI** | Gradio |
+| **UI** | Streamlit |
 | **Container** | Docker, Docker Compose |
 | **CI/CD** | GitHub Actions |
-| **Cloud** | Hugging Face Spaces |
+| **Cloud** | Streamlit Community Cloud |
 
 ---
 

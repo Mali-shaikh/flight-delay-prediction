@@ -19,8 +19,8 @@ uvicorn==0.27.0
 pydantic==2.5.3
 python-multipart==0.0.7
 
-# Gradio UI (Hugging Face Spaces)
-gradio==4.16.0
+# Streamlit UI (Frontend)
+streamlit==1.31.0
 
 # Monitoring / Drift Detection
 evidently==0.4.13
