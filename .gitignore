@@ -16,10 +16,12 @@ env/
 data/raw/
 data/processed/*.csv
 
-# Model artifacts (large binaries)
-models/*.pkl
-models/*.joblib
-models/*.h5
+# Model artifacts (allow specific ones for deployment)
+# models/*.pkl
+# models/*.joblib
+# models/*.h5
+!models/best_model.pkl
+!models/feature_names.pkl
 
 # MLflow
 mlruns/
