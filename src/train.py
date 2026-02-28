@@ -207,8 +207,12 @@ def train(use_mlflow: bool = True) -> None:
     print(f"{'='*50}")
 
     # Save best model
-    joblib.dump(best_model, BEST_MODEL_PATH)
-    joblib.dump(feature_names, FEATURE_NAMES_PATH)
+    import pickle
+    with open(BEST_MODEL_PATH, "wb") as f:
+        pickle.dump(best_model, f)
+    with open(FEATURE_NAMES_PATH, "wb") as f:
+        pickle.dump(feature_names, f)
+        
     print(f"\nBest model saved to: {BEST_MODEL_PATH}")
     print(f"Feature names saved to: {FEATURE_NAMES_PATH}")
 
