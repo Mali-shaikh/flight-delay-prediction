@@ -1,0 +1,33 @@
+version: "3.8"
+
+services:
+  flight-api:
+    build: .
+    container_name: flight-delay-api
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./models:/app/models
+      - ./database:/app/database
+      - ./data:/app/data
+    environment:
+      - PYTHONUNBUFFERED=1
+      - DATABASE_URL=sqlite:///database/flight_delay.db
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  mlflow:
+    image: python:3.11-slim
+    container_name: mlflow-server
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./mlruns:/mlruns
+    command: >
+      sh -c "pip install mlflow -q &&
+             mlflow server --host 0.0.0.0 --port 5000 --backend-store-uri /mlruns"
+    restart: unless-stopped

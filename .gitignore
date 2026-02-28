@@ -1,0 +1,55 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.so
+
+# Virtual environments
+venv/
+env/
+.venv/
+.env
+
+# Data (large raw files)
+data/raw/
+data/processed/*.csv
+
+# Model artifacts (large binaries)
+models/*.pkl
+models/*.joblib
+models/*.h5
+
+# MLflow
+mlruns/
+mlartifacts/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Database
+database/*.db
+
+# Docker
+.dockerignore
+
+# Env secrets
+.env
+*.env
+secrets.json
