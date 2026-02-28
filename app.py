@@ -136,7 +136,7 @@ DAY_NAMES = {"Monday": 1, "Tuesday": 2, "Wednesday": 3, "Thursday": 4, "Friday":
 st.markdown('<h1 class="main-header">FlightWise Predictor</h1>', unsafe_allow_html=True)
 st.markdown("#### *Smart Flight Delay Intel Powered by Artificial Intelligence*")
 
-st.image(ROOT / "assets" / "header_banner.png", use_container_width=True)
+st.image("assets/header_banner.png", use_container_width=True)
 
 st.divider()
 
@@ -242,6 +242,3 @@ with info_col3:
 
 st.markdown("<br>", unsafe_allow_html=True)
 st.caption("FlightWise AI v1.5 | Premium MSc Data Science Project Dashboard")
-
-
-
